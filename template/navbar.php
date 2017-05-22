@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php"><i class="fa fa-cloud"></i> Grab Data Barang</a>
+        <a class="navbar-brand" href="index.php"><i class="fa fa-cloud"></i> Compare IT Admin</a>
     </div>
     <!-- /.navbar-header -->
     <ul class="nav navbar-top-links navbar-right">
