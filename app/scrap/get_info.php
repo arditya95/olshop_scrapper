@@ -1,5 +1,5 @@
 <?php
-include '../../setting/koneksi.php';
+include_once '../../setting/koneksi.php';
 // $url="https://www.tokopedia.com/cahayasteel/xiaomi-mi-max-3gb32gb-lte-4g-gold?trkid=f=Ca0000L000P0W0S0Sh00Co0Po0Fr0Cb0_src=catalog-product_page=1_ob=14_q=_catid=24_po=1&src=catalog";
 $url="https://item.blanja.com/item/jual-beli-samsung-galaxy-s8-plus-garansi-resmi-sein-1th-15726427";
 $host= parse_url($url, PHP_URL_HOST);
@@ -8,7 +8,7 @@ $count=0;
 $img=0;
 //========================================================================================================================================
 if ($host=="www.tokopedia.com") {
-  include("../../setting/simple_html_dom.php");
+  include_once("../../setting/simple_html_dom.php");
   $html = file_get_html($url);
 
   //NGAMBIL NAMA BARANG
@@ -147,7 +147,7 @@ elseif ($host=="item.blanja.com" || $host=="www.blanja.com") {
       }
     }
   //NGAMBIL HARGA
-  
+
   echo "FINISH";
 }
 //========================================================================================================================================
