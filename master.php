@@ -22,7 +22,7 @@
                   require_once 'master/data_barang/kategori.php';
                 }
                 elseif ($_GET['kode']==4) {
-                  require_once 'master/data_barang/user.php';
+                  require_once 'master/data_barang/link.php';
                 }
                 else {
                   require_once 'master/data_barang/pilih.php';

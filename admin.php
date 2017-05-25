@@ -33,28 +33,20 @@
               <!-- KOLOM 1 -->
                 <div class="panel panel-primary">
                   <div class="panel-heading">
-                    <label>Pilih Website</label>
+                    <label>Ambil Data</label>
                   </div>
                     <div class="panel-body">
-                      <form class="form-horizontal" action="#" method="post">
-                        <table class="table table-striped table-bordered">
-                          <?php
-                            include_once 'setting/koneksi.php';
-                            $query=("SELECT id_web, nama_web FROM tb_web");
-                            $hasil = mysqli_query($con,$query);
-                            $select= '<select name="website" class="form-control" onchange="showUser(this.value)">';
-                            while($row=mysqli_fetch_array($hasil))
-                              {
-                                  $select.='<option selected="selected" value="'.$row['id_web'].'">'.$row['nama_web'].'</option>';
-                              }
-                            $select.='</select>';
-                            echo $select;
-                          ?>
-                          <div id="txtHint"></div>
-                        </table>
-                        <a href="app\scrap\get_link.php" class="btn btn-primary" role="button">Proses Get Link</a>
-                        <a href="app\scrap\get_info.php" class="btn btn-primary" role="button">Proses Get Info</a>
-                        <a href="app\scrap\filter.php" class="btn btn-primary" role="button">Proses Filtering</a>
+                      <form class="form-horizontal" action="app\scrap\get_info_manual.php" method="post">
+                        <div class="container-fluid">
+                          <div class="form-group">
+                            <label for="link">Link Barang</label>
+                            <input type="text" class="form-control" name="link" placeholder="Input Link Barang Disini">
+                          </div>
+                        </div>
+                        <input type="submit" name="submit" class="btn btn-primary" value="Get Data">
+                        <!-- <a href="app\scrap\get_link.php" class="btn btn-primary" role="button">Proses Get Link</a> -->
+                        <!-- <a href="app\scrap\get_info.php" class="btn btn-primary" role="button">Proses Get Info</a> -->
+                        <!-- <a href="app\scrap\filter.php" class="btn btn-primary" role="button">Proses Filtering</a> -->
                       </form>
                     </div>
                 </div>
@@ -68,6 +60,5 @@
 include 'template/script.php';
 include 'template/footer.php';
 ?>
-
   </body>
 </html>

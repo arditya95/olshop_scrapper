@@ -5,13 +5,22 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a href="#" class="navbar-brand">Compare IT</a>
+    <a href="index.php" class="navbar-brand">Compare IT</a>
   </div>
   <div class="collapse navbar-collapse" id="target-list">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="index.php">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="app\login\login.php">Login</a></li>
+      <?php
+      session_start();
+      if(!isset($_SESSION['username'])) {
+        echo '<li><a href="app\login\login.php">Login</a></li>';
+      }
+      else {
+        echo '<li><a href="admin.php">Halaman Admin</a></li>';
+      }
+      ?>
+
     </ul>
     <form role="search" class="navbar-form navbar-right">
       <div class="form-group">

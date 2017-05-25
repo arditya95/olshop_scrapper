@@ -24,6 +24,7 @@
     $jumlah_desimal ="2";
     $pemisah_desimal =",";
     $pemisah_ribuan =".";
+    $linkweb= "https://" . $row['nama_web'];
   ?>
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
@@ -32,6 +33,7 @@
           <a href="<?php echo $row['link_barang']; ?>" target="_blank"> <h3> <?php echo $row['nama_barang']; ?> </h3> </a>
           <h3> <?php echo "Rp. " .number_format($angka, $jumlah_desimal, $pemisah_desimal, $pemisah_ribuan); ?> </h3>
           <p>From : <a href="<?php echo $row['link_barang']; ?>" target="_blank"> <?= $row['nama_web']; ?> </p>
+            <a href="<?php echo $linkweb; ?>" target="_blank" class="btn btn-primary"> Go Buy 2</a>
           <a href="<?php echo $row['link_barang']; ?>" target="_blank" class="btn btn-primary"> Go Buy </a>
         </div>
       </div>

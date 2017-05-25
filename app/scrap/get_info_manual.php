@@ -1,14 +1,27 @@
 <?php
 include_once '../../setting/koneksi.php';
 include_once("../../setting/simple_html_dom.php");
+
+if (isset($_POST['submit'])) {
+  $link = $_POST['link'];
+  $sql_link="SELECT * from tb_link where link='$link'";
+  $hasil_cek_link = mysqli_query($con,$sql_link);
+  $row_cek_link=mysqli_num_rows($hasil_cek_link);
+  if ($row_cek_link==0){
+    $sql="INSERT INTO tb_link (link) VALUES ('$link');";
+    echo $sql;
+    mysqli_query($con,$sql);
+  }
+}
+
 $pilih = "SELECT * FROM tb_link WHERE label=0";
-$hasil = mysqli_query($con,$pilih);
-while ($row = mysqli_fetch_array($hasil))
+$hasil_link = mysqli_query($con,$pilih);
+while ($row_link = mysqli_fetch_array($hasil_link))
  {
-   if($hasil === FALSE) { die(mysql_error()); }
-   if($row === FALSE) { die(mysql_error()); } 
-   $url=$row['link'];
-   echo $row['link'] . "<br>";
+   exec('php -q filter.php');
+   $url=$row_link['link'];
+   $link_id = $row_link['id_link'];
+   echo $row_link['link'] . "<br>";
    $host= parse_url($url, PHP_URL_HOST);
    echo $host . "<br>";
    $count=0;
@@ -89,7 +102,7 @@ while ($row = mysqli_fetch_array($hasil))
          //}
        //}
        //NGAMBIL DESKRIPSI TOKO
-     echo "FINISH";
+     echo "FINISH" . "<br>";
    }
 
    //========================================================================================================================================
@@ -168,8 +181,12 @@ while ($row = mysqli_fetch_array($hasil))
      //     // echo "<br>";
      //   }
      //NGAMBIL DESKRIPSI TOKO
-     echo "FINISH";
+     echo "FINISH" . "<br>";
    }
    //========================================================================================================================================
+   $query = "UPDATE tb_link SET label=1 WHERE id_link = $link_id";
+   mysqli_query($con,$query);
+  exec('php -q filter.php');
  }
+ header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>

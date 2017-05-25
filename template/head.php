@@ -29,10 +29,10 @@
 
 <script>
 function getDataBarang(typ, value) {
-   if (typ == "" || value == "") {
-       document.getElementById("txtHint").innerHTML = "Barang yang anda cari tidak saat ini belum tersedia..";
-       return;
-   } else {
+  //  if (typ == "" || value == "") {
+  //      document.getElementById("txtHint").innerHTML = "Barang yang anda cari tidak saat ini belum tersedia..";
+  //      return;
+  //  } else {
        if (window.XMLHttpRequest) {
            // code for IE7+, Firefox, Chrome, Opera, Safari
            xmlhttp = new XMLHttpRequest();
@@ -47,6 +47,6 @@ function getDataBarang(typ, value) {
        };
        xmlhttp.open("GET","search/getData.php?type="+typ+ "&val="+value,true);
        xmlhttp.send();
-   }
+  //  }
 }
 </script>

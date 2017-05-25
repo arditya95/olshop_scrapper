@@ -18,6 +18,7 @@
     <div id="txtHint">
       <?php
         include 'template/jumbotron.php';
+        include 'template/content.php';
       ?>
     </div>
     <?php
