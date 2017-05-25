@@ -7,12 +7,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php"><i class="fa fa-cloud"></i> Compare IT Admin</a>
+        <a class="navbar-brand" href="index.php"><i class="fa fa-cloud"></i> Compare IT</a>
     </div>
     <!-- /.navbar-header -->
     <ul class="nav navbar-top-links navbar-right">
         <li class="dropdown">
-            <a href="logout.php">
+            <a href="app/login/logout.php">
                 <i class="fa fa-cogs fa-fw"></i>  Logout
             </a>
         </li>
@@ -25,13 +25,13 @@
                 <li>
                     <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="link.php"><i class="fa fa-link"></i> Web Link</a>
                 </li>
 
                 <li>
                     <a href="view_data.php"><i class="fa fa-eye"></i> View Data</a>
-                </li>
+                </li> -->
 
                 <li>
                     <a href="#"><i class="fa fa-table"></i> Master Data<span class="fa arrow"></span></a>

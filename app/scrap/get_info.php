@@ -1,7 +1,7 @@
 <?php
 include_once '../../setting/koneksi.php';
-// $url="https://www.tokopedia.com/cahayasteel/xiaomi-mi-max-3gb32gb-lte-4g-gold?trkid=f=Ca0000L000P0W0S0Sh00Co0Po0Fr0Cb0_src=catalog-product_page=1_ob=14_q=_catid=24_po=1&src=catalog";
-$url="https://item.blanja.com/item/jual-beli-samsung-galaxy-s8-plus-garansi-resmi-sein-1th-15726427";
+$url="https://www.tokopedia.com/cahayasteel/xiaomi-mi-max-3gb32gb-lte-4g-gold?trkid=f=Ca0000L000P0W0S0Sh00Co0Po0Fr0Cb0_src=catalog-product_page=1_ob=14_q=_catid=24_po=1&src=catalog";
+// $url="https://item.blanja.com/item/jual-beli-samsung-galaxy-j3-resmi--15357540";
 $host= parse_url($url, PHP_URL_HOST);
 // echo $host;
 $count=0;
@@ -148,6 +148,21 @@ elseif ($host=="item.blanja.com" || $host=="www.blanja.com") {
     }
   //NGAMBIL HARGA
 
+  //NGAMBIL DESKRIPSI TOKO
+  // foreach($html->find('div[class="seller-info clearfix p15"] text') as $e)
+  //   {
+  //     $hasil =$e->innertext;
+  //     if(ctype_space($hasil)){
+  //       // echo "Data Kosong" . "<br>";
+  //     }
+  //     else {
+  //       var_dump($hasil) ;
+  //       echo "<br>";
+  //     }
+  //     // var_dump($hasil) ;
+  //     // echo "<br>";
+  //   }
+  //NGAMBIL DESKRIPSI TOKO
   echo "FINISH";
 }
 //========================================================================================================================================

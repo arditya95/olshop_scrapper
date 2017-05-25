@@ -10,15 +10,19 @@
     include 'template/head.php';
     // include 'template/navbar.php';
     include 'template/navhome.php';
-    include 'template/jumbotron.php';
-    include 'template/content.php';
-    // include 'template/script.php';
+    // include 'template/jumbotron.php';
+    // include 'template/content.php';
     // include 'template/footer.php';
+    // include 'template/script.php';
     ?>
-<?php
-include 'template/script.php';
-include 'template/footer.php';
-?>
-
+    <div id="txtHint">
+      <?php
+        include 'template/jumbotron.php';
+      ?>
+    </div>
+    <?php
+      include 'template/script.php';
+      // include 'template/footer.php';
+    ?>
   </body>
 </html>

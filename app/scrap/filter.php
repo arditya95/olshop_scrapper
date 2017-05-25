@@ -22,8 +22,8 @@
               $use_id_barang = mysqli_insert_id($con);
               $sql_input = "UPDATE tb_det_barang SET id_barang = ($use_id_barang) WHERE id_det_barang=$use_id_detail;";
               $new_input = mysqli_query($con,$sql_input);
-              echo "[BARANG] Print SQL New Input : ".$sql_input . "<br>";
-              echo "[BARANG] Last ID yang Diambil : ". $use_id_barang. "<br>";
+              // echo "[BARANG] Print SQL New Input : ".$sql_input . "<br>";
+              // echo "[BARANG] Last ID yang Diambil : ". $use_id_barang. "<br>";
               $use_id_barang=0;
             }
           }
@@ -46,14 +46,14 @@
                       while ($rowid = mysqli_fetch_array($hasil_cek))
                       {
                         $use_id_url = $rowid['id_web'];
-                        echo "[WEB] ID yang Diambil : ". $use_id_url. "<br>";
+                        // echo "[WEB] ID yang Diambil : ". $use_id_url. "<br>";
                       }
                     }
                     else {
                       $sql_input = "INSERT INTO tb_web (nama_web) VALUES ('$host');";
                       $new_input = mysqli_query($con,$sql_input);
                       $use_id_url = mysqli_insert_id($con);
-                      echo "[WEB] Print SQL New Input : ".$sql_input . "<br>";
+                      // echo "[WEB] Print SQL New Input : ".$sql_input . "<br>";
                       // echo "[WEB] Last ID yang Diambil : ". $use_id_url. "<br>";
                     }
                   }
@@ -61,27 +61,27 @@
               $sql_input = "INSERT INTO tb_det_barang (link_barang, id_web) SELECT td, $use_id_url FROM tmp WHERE tmp.`id`=$row[id];";
               $new_input = mysqli_query($con,$sql_input);
               $use_id_detail = mysqli_insert_id($con);
-              echo "[URL] Print SQL New Input : ".$sql_input . "<br>";
-              echo "[URL] Last ID yang Diambil : ". $use_id_detail. "<br>";
+              // echo "[URL] Print SQL New Input : ".$sql_input . "<br>";
+              // echo "[URL] Last ID yang Diambil : ". $use_id_detail. "<br>";
               $use_id_url=0;
           }
 //========================================================================================================================================
         elseif ($row['th']=="img"){
               $sql_input = "UPDATE tb_det_barang SET gambar = (SELECT td FROM tmp WHERE tmp.`id`=$row[id]) WHERE id_det_barang=$use_id_detail;";
               $new_input = mysqli_query($con,$sql_input);
-              echo "[GAMBAR] Print SQL New Input : ".$sql_input . "<br>";
-              echo "[GAMBAR] Last ID yang Diambil : ". $use_id_detail. "<br>";
+              // echo "[GAMBAR] Print SQL New Input : ".$sql_input . "<br>";
+              // echo "[GAMBAR] Last ID yang Diambil : ". $use_id_detail. "<br>";
           }
 //========================================================================================================================================
         elseif ($row['th']=="Rp"){
               $sql_input = "UPDATE tb_det_barang SET harga = (SELECT td FROM tmp WHERE tmp.`id`=$row[id]) WHERE id_det_barang=$use_id_detail;";
               $new_input = mysqli_query($con,$sql_input);
-              echo "[HARGA] Print SQL New Input : ".$sql_input . "<br>";
-              echo "[HARGA] Last ID yang Diambil : ". $use_id_detail. "<br>";
+              // echo "[HARGA] Print SQL New Input : ".$sql_input . "<br>";
+              // echo "[HARGA] Last ID yang Diambil : ". $use_id_detail. "<br>";
               $use_id_detail=0;
           }
 //========================================================================================================================================
-      // $sql .= "TRUNCATE TABLE tmp;";
+      $sql .= "TRUNCATE TABLE tmp;";
     }
       // $time_elapsed_secs = microtime(true) - $start;
       // $duration = $time_elapsed_secs;

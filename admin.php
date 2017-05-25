@@ -6,6 +6,10 @@
   </head>
   <body>
     <?php
+    session_start();
+    if(!isset($_SESSION['username'])) {
+       header('location: app/login/login.php');
+    }
     // include 'setting/koneksi.php';
     include 'template/head.php';
     // include 'template/navbar.php';
@@ -48,9 +52,9 @@
                           ?>
                           <div id="txtHint"></div>
                         </table>
-                        <a href="get_link.php" class="btn btn-primary" role="button">Proses Get Link</a>
-                        <a href="get_fact.php" class="btn btn-primary" role="button">Proses Get Fact</a>
-                        <a href="filter.php" class="btn btn-primary" role="button">Proses Filtering</a>
+                        <a href="app\scrap\get_link.php" class="btn btn-primary" role="button">Proses Get Link</a>
+                        <a href="app\scrap\get_info.php" class="btn btn-primary" role="button">Proses Get Info</a>
+                        <a href="app\scrap\filter.php" class="btn btn-primary" role="button">Proses Filtering</a>
                       </form>
                     </div>
                 </div>

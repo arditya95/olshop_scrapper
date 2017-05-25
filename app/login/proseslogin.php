@@ -15,7 +15,7 @@
        $_SESSION['username'] = $hasil['username'];
        $_SESSION['id_user'] = $hasil['id_user'];
        echo "Sesion : " . $_SESSION['id_user'] . "<br>" . "Variable : " . $hasil['id_user'];
-       header('location:index.php');
+       header('location:../../admin.php');
      }
    }
 ?>

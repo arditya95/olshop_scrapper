@@ -1,5 +1,48 @@
-<?php
-$url='http://www.lazada.co.id/samsung-galaxy-j2-prime-sm-g532-silver-11763716.html?spm=a2o4j.category-010000000000.0.0.fQ9BYI&ff=1&sc=EXEN&';
-$host= parse_url($url, PHP_URL_HOST);
-echo $host;
-?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="DataTables/media/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="DataTables/media/js/jquery.dataTables.js"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="DataTables/media/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="DataTables/media/js/jquery.dataTables.js"></script>
+    <table id="example" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+    <link rel="stylesheet" type="text/css" href="DataTables/media/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="DataTables/media/js/jquery.dataTables.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function()
+        {
+          $('#example').DataTable(
+            {
+              "ajax": 'arrays.txt'
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="DataTables/media/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="DataTables/media/js/jquery.dataTables.js"></script>
+  </body>
+</html>

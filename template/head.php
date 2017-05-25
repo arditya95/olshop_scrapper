@@ -26,3 +26,27 @@
     .show-left{right: 0; left: auto;}
     a{cursor: pointer;}
 </style>
+
+<script>
+function getDataBarang(typ, value) {
+   if (typ == "" || value == "") {
+       document.getElementById("txtHint").innerHTML = "Barang yang anda cari tidak saat ini belum tersedia..";
+       return;
+   } else {
+       if (window.XMLHttpRequest) {
+           // code for IE7+, Firefox, Chrome, Opera, Safari
+           xmlhttp = new XMLHttpRequest();
+       } else {
+           // code for IE6, IE5
+           xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+       }
+       xmlhttp.onreadystatechange = function() {
+           if (this.readyState == 4 && this.status == 200) {
+               document.getElementById("txtHint").innerHTML = this.responseText;
+           }
+       };
+       xmlhttp.open("GET","search/getData.php?type="+typ+ "&val="+value,true);
+       xmlhttp.send();
+   }
+}
+</script>
