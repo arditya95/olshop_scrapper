@@ -20,14 +20,11 @@
         echo '<li><a href="admin.php">Halaman Admin</a></li>';
       }
       ?>
-
     </ul>
     <form role="search" class="navbar-form navbar-right">
       <div class="form-group">
-        <input type="text" class="search form-control" id="searchInput" placeholder="Cari Barang...">
-        <input type="button" class="btn btn-primary" value="Cari" onclick="getDataBarang('search',$('#searchInput').val())"/>
-        <!-- <input type="text" name="" class="form-control" placeholder="Cari Barang...">
-        <button type="submit" name="button" class="btn btn-primary">Cari</button> -->
+        <!-- <input type="text" class="search form-control" id="searchInput" placeholder="Cari Barang...">
+        <input type="button" class="btn btn-primary" value="Cari" onclick="getDataBarang('search',$('#searchInput').val())"/> -->
       </div>
     </form>
   </div>
