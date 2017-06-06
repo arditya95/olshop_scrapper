@@ -37,13 +37,13 @@
                     <a href="#"><i class="fa fa-table"></i> Master Data<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="master.php?kode=1.php"><i class="fa fa-table"></i> Data Barang</a>
+                            <a href="route.php?kode=1.php"><i class="fa fa-table"></i> Data Barang</a>
                         </li>
                         <li>
-                            <a href="master.php?kode=2.php"><i class="fa fa-table"></i> Data Toko</a>
+                            <a href="route.php?kode=2.php"><i class="fa fa-table"></i> Data Toko</a>
                         </li>
                         <li>
-                            <a href="master.php?kode=3.php"><i class="fa fa-table"></i> Data Kategori</a>
+                            <a href="route.php?kode=3.php"><i class="fa fa-table"></i> Data Kategori</a>
                         </li>
                     </ul>
                 </li>

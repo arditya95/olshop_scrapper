@@ -25,11 +25,11 @@
                   require_once 'master/data_barang/link.php';
                 }
                 else {
-                  require_once 'master/data_barang/pilih.php';
+                  require_once 'master/data_barang/barang.php';
                 }
               }
               else {
-                require_once 'master/data_barang/pilih.php';
+                require_once 'master/data_barang/barang.php';
               }
             ?>
             <!-- END -->
