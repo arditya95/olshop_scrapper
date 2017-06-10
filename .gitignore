@@ -6,7 +6,7 @@ ehthumbs.db
 Desktop.ini
 .ftpconfig
 koneksi.php
-setting/
+setting\
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
