@@ -8,5 +8,5 @@ if (isset($_POST['submit'])) {
   echo $sql;
   mysqli_query($con,$sql);
 }
-header("Location: ../../../master.php?kode=2.php");
+header("Location: ../../../route.php?kode=2.php");
 ?>

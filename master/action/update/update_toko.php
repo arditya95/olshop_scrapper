@@ -7,6 +7,6 @@ if (isset($_POST['submit'])) {
   $sql="UPDATE tb_web SET nama_web = '$nama', link_toko = '$link' WHERE id_web = '$id';";
   // echo $sql;
   mysqli_query($con,$sql);
-  header("Location: ../../../master.php?kode=2.php");
+  header("Location: ../../../route.php?kode=2.php");
 }
 ?>

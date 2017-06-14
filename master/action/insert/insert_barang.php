@@ -13,5 +13,5 @@ if (isset($_POST['submit'])) {
   $sql_det_barang="INSERT INTO tb_det_barang (id_barang, id_web, harga, link_barang) VALUES ('$use_id_barang','$toko','$harga','$link');";
   mysqli_query($con,$sql_det_barang);
 }
-header("Location: ../../../master.php?kode=1.php");
+header("Location: ../../../route.php?kode=1.php");
 ?>

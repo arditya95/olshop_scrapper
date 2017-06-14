@@ -15,6 +15,6 @@ if (isset($_POST['submit'])) {
   $sql_det_barang="UPDATE tb_det_barang SET id_barang = '$id_barang', id_web = '$toko' , harga = '$harga' , link_barang = '$link' WHERE id_det_barang = '$id_det_barang';";
   mysqli_query($con,$sql_det_barang);
   // echo $sql_det_barang;
-  header("Location: ../../../master.php?kode=1.php");
+  header("Location: ../../../route.php?kode=1.php");
 }
 ?>
