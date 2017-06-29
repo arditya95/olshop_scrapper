@@ -26,7 +26,7 @@
                     <a href="admin.php"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="link.php"><i class="fa fa-link"></i> Web Link</a>
+                    <a href="route.php?kode=4.php"><i class="fa fa-link"></i> Web Link</a>
                 </li>
 
                 <!-- <li>

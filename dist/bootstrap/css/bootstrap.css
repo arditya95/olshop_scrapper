@@ -4243,6 +4243,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-static-top {
   z-index: 1000;
   border-width: 0 0 1px;
+  border-color: #438eb9;
 }
 @media (min-width: 768px) {
   .navbar-static-top {
@@ -4492,12 +4493,15 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
   }
 }
+
 .navbar-default {
   background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  border-color: #26779e;
+
 }
 .navbar-default .navbar-brand {
   color: #777;
+  /*color: #626060;*/
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
