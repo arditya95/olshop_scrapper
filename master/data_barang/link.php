@@ -7,6 +7,7 @@
     <thead>
       <th style="text-align:center;" class="text-uppercase">No</th>
       <th style="text-align:center;" class="text-uppercase">Link</th>
+      <th style="text-align:center;" class="text-uppercase">Toko</th>
       <th style="text-align:center;" class="text-uppercase">Status</th>
       <th style="text-align:center;" class="text-uppercase">Action</th>
     </thead>
@@ -26,10 +27,17 @@
                  $flag="Uncheked";
                  $warna="danger";
               }
+
+              $url=$row['link'];
+              $host= parse_url($url, PHP_URL_HOST);
+              if (!strcmp($host,"item.blanja.com")) {
+                $host="www.blanja.com";
+              }
               echo "
               <tr>
                  <td style='text-align:center;' >".$no."</td>
-                 <td> <a href='.$row[link].'>$row[link]</a></td>
+                 <td> <a href=$row[link]>$row[link]</a></td>
+                 <td style='text-align:center;' >".$host."</td>
                  <td class=$warna style='text-align:center;'>$flag</td>
                  <td style='text-align:center;'>
                  <a href='master\action\delete\delete_link.php?id=$row[id_link]' class='delete'>

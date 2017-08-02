@@ -50,7 +50,7 @@
           <a href="<?php echo $row['link_barang']; ?>" target="_blank"> <h3> <?php echo $row['nama_barang']; ?> </h3> </a>
           <h3> <?php echo "Rp. " .number_format($angka, $jumlah_desimal, $pemisah_desimal, $pemisah_ribuan); ?> </h3>
           <p>From : <a href="<?php echo $row['link_barang']; ?>" target="_blank"> <?= $row['nama_web']; ?> </p>
-          <a href="<?php echo $row['link_barang']; ?>" target="_blank" class="btn btn-primary"> Go Buy </a>
+          <a href="<?php echo $row['link_barang']; ?>" target="_blank" class="btn btn-primary"> Details </a>
         </div>
       </div>
     </div>

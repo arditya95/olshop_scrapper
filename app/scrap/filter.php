@@ -34,6 +34,9 @@
               while ($row_url = mysqli_fetch_array($hasil_url)){
                   $url_cek=$row_url['td'];
                   $host= parse_url($row_url['td'], PHP_URL_HOST);
+                  // if (!strcmp($host,"item.blanja.com")) {
+                  //   $host="www.blanja.com";
+                  // }
                   // echo $url_cek . " => " . $host . "<br>";
                   $sql_cek_url="SELECT link_barang from tb_det_barang where link_barang='$url_cek'";
                   $hasil_cek_url = mysqli_query($con,$sql_cek_url);
